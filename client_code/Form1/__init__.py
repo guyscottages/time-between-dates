@@ -10,4 +10,10 @@ class Form1(Form1Template):
     # Any code you write here will run before the form opens.
 
   def date_picker_2_change(self, **event_args):
-    self.label_1.text = self.date_picker_2.date - self.date_picker_1.date
+    if self.date_picker_2.date is not None and self.date_picker_2.date is not None:
+      self.label_1.text = self.date_picker_2.date - self.date_picker_1.date
+
+  def date_picker_1_change(self, **event_args):
+    if self.date_picker_2.date is not None and self.date_picker_2.date is not None:
+      self.label_1.text = self.date_picker_2.date - self.date_picker_1.date
+
