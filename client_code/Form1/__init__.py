@@ -18,5 +18,5 @@ class Form1(Form1Template):
       self.label_1.text = self.date_picker_2.date - self.date_picker_1.date
 
   def button_1_click(self, **event_args):
-    Notification("A menu item").show()
+    alert('Hi ' + 'Derek' + '!')
 

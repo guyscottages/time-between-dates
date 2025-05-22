@@ -5,9 +5,11 @@ components:
     properties: {align: center, font_size: 20, text: Time Between Dates}
     type: Label
   - event_bindings: {change: date_picker_1_change}
-    layout_properties: {grid_position: 'DYOMTI,MBVEIB'}
+    layout_properties: {full_width_row: false, grid_position: 'DYOMTI,MBVEIB', row_background: 'theme:Tertiary Container'}
     name: date_picker_1
-    properties: {pick_time: true}
+    properties:
+      margin: [null, '250', null, '250']
+      pick_time: true
     type: DatePicker
   - event_bindings: {change: date_picker_2_change}
     layout_properties: {grid_position: 'HHOGSR,KFXENU'}
@@ -20,7 +22,11 @@ components:
     type: Label
   layout_properties: {slot: default}
   name: content_panel
-  properties: {col_widths: '{}'}
+  properties:
+    background: theme:On Primary
+    col_widths: '{}'
+    spacing:
+      margin: [null, '400', null, '400']
   type: ColumnPanel
 - layout_properties: {slot: nav-right}
   name: navbar_links
@@ -37,6 +43,6 @@ components:
   properties: {}
   type: ColumnPanel
 container:
-  properties: {html: '@theme:standard-page.html'}
+  properties: {html: '@theme:standard-page.html', visible: true}
   type: HtmlTemplate
 is_package: true
